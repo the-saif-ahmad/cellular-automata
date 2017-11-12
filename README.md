@@ -23,5 +23,5 @@ $ mvn idea:idea
 
 To generate files for Eclipse:
 ```Bash
-mvn eclipse:eclipse
+$ mvn eclipse:eclipse
 ```

@@ -9,11 +9,11 @@ My implementations of various cellular automata
 # Keybindings
 `q`: Quit
 
-`r`: Reset the current automata
+`r`: Reset the current automaton
 
-'b': Go to previous automata
+'b': Go to previous automaton
 
-'n': Go to next automata
+'n': Go to next automaton
 
 Left arrow: Doube steps between display updates
 

@@ -2,7 +2,7 @@ package com.cells.LangtonsAnt;
 
 import com.cells.*;
 
-public class LangtonsAnt extends CellularAutomata {
+public class LangtonsAnt extends CellularAutomaton {
 	private int xLoc, yLoc;
 	private int facing;
 
@@ -42,7 +42,7 @@ public class LangtonsAnt extends CellularAutomata {
 	}
 
 	@Override
-	public CellularAutomata clone() {
+	public CellularAutomaton clone() {
 		LangtonCell[][] newCells = new LangtonCell[cells.length][cells[0].length];
 
 		for (int x = 0; x < cells.length; x++)

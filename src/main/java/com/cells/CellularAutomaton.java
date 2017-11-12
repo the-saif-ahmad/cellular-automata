@@ -1,6 +1,6 @@
 package com.cells;
 
-public abstract class CellularAutomata {
+public abstract class CellularAutomaton {
 	protected String name;
 	protected int size;
 	protected Cell[][] cells;
@@ -48,5 +48,5 @@ public abstract class CellularAutomata {
 	}
 
 	public abstract void update();
-	public abstract CellularAutomata clone();
+	public abstract CellularAutomaton clone();
 }

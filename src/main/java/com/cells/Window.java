@@ -9,15 +9,15 @@ import java.lang.InterruptedException;
 public class Window extends JComponent implements Runnable, KeyListener {
 	private JFrame frame;
 	private Thread thread;
-	private CellularAutomata cellAuto;
+	private CellularAutomaton cellAuto;
 	private int stepsPerCycle;
 	private int delay = 1;
 
-	public Window(int width, int height, CellularAutomata cellAuto) {
+	public Window(int width, int height, CellularAutomaton cellAuto) {
 		this(width, height, 1, cellAuto);
 	}
 
-	public Window(int width, int height, int stepsPerCycle, CellularAutomata cellAuto) {
+	public Window(int width, int height, int stepsPerCycle, CellularAutomaton cellAuto) {
 		this.stepsPerCycle = stepsPerCycle < 1 ? 1 : stepsPerCycle;
 		this.cellAuto = cellAuto;
 

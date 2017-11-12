@@ -10,7 +10,7 @@ public class App {
 	public static final int cellSize = 3;
 	public static int SELECTED = 0;
 
-	public static final CellularAutomata[] cellAutos = new CellularAutomata[] {
+	public static final CellularAutomaton[] cellAutos = new CellularAutomaton[] {
 		new ConwaysGame(cellsX, cellsY, cellSize, true),
 		new LangtonsAnt(cellsX, cellsY, cellSize, true),
 		new BriansBrain(cellsX, cellsY, cellSize, true)

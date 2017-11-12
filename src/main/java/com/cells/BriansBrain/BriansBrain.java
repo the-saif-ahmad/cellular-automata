@@ -1,40 +1,40 @@
-package com.cells.ConwaysGame;
+package com.cells.BriansBrain;
 
 import com.cells.*;
 import java.util.Random;
 import java.awt.Color;
 
-public class ConwaysGame extends CellularAutomaton {
-	public ConwaysGame(int size, ConwayCell[][] cells, boolean isCircular) {
+public class BriansBrain extends CellularAutomaton {
+	public BriansBrain(int size, BriansBrainCell[][] cells, boolean isCircular) {
 		this.isCircular = isCircular;
 
-		name = "Conway's Game of Life";
+		name = "Brian's Brain";
 		this.cells = cells;
 	}
 
-	public ConwaysGame(int width, int height, int size, boolean isCircular) {
+	public BriansBrain(int width, int height, int size, boolean isCircular) {
 		this.isCircular = isCircular;
 
-		name = "Conway's Game of Life";
-		cells = new ConwayCell[width][height];
+		name = "Brian's Brain";
+		cells = new BriansBrainCell[width][height];
 
 		Random rand = new Random();
 
 		for (int x = 0; x < cells.length; x++)
 			for (int y = 0; y < cells[0].length; y++)
-				cells[x][y] = new ConwayCell(x * size, y * size, size, rand.nextBoolean());
+				cells[x][y] = new BriansBrainCell(x * size, y * size, size, rand.nextBoolean());
 	}
 
 	@Override
 	public void update() {
-		ConwayCell[][] newCells = new ConwayCell[cells.length][cells[0].length];
+		BriansBrainCell[][] newCells = new BriansBrainCell[cells.length][cells[0].length];
 
 		for (int x = 0; x < cells.length; x++) {
 			for (int y = 0; y < cells[0].length; y++) {
 				Cell[] neighbors = getNeighbors(x, y);
 				int livingCells = getLivingCells(neighbors);
 
-				newCells[x][y] = ((ConwayCell) cells[x][y]).clone();
+				newCells[x][y] = ((BriansBrainCell) cells[x][y]).clone();
 				newCells[x][y].update(livingCells);
 			}
 		}
@@ -44,20 +44,20 @@ public class ConwaysGame extends CellularAutomaton {
 
 	@Override
 	public CellularAutomaton clone() {
-		ConwayCell[][] newCells = new ConwayCell[cells.length][cells[0].length];
+		BriansBrainCell[][] newCells = new BriansBrainCell[cells.length][cells[0].length];
 
 		for (int x = 0; x < cells.length; x++)
 			for (int y = 0; y < cells[0].length; y++)
-				newCells[x][y] = ((ConwayCell) cells[x][y]).clone();
+				newCells[x][y] = ((BriansBrainCell) cells[x][y]).clone();
 
-		return new ConwaysGame(size, newCells, isCircular);
+		return new BriansBrain(size, newCells, isCircular);
 	}
 
 	private int getLivingCells(Cell[] cells) {
 		int sum = 0;
 
 		for (Cell c : cells)
-			if (((ConwayCell) c).isAlive())
+			if (((BriansBrainCell) c).isAlive())
 				sum++;
 
 		return sum;

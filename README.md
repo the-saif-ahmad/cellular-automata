@@ -1,6 +1,10 @@
 # cellular-automata
 My implementations of various cellular automata
 
+# Implementations
+* Conway's Game of Life
+* Langton's Ant
+
 # How to run
 Compile with Maven
 ```Bash

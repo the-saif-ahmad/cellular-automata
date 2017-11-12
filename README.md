@@ -4,6 +4,7 @@ My implementations of various cellular automata
 # Implementations
 * Conway's Game of Life
 * Langton's Ant
+* Brian's Brain
 
 # How to run
 Compile with Maven

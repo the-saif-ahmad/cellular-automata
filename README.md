@@ -5,6 +5,7 @@ My implementations of various cellular automata
 * Conway's Game of Life
 * Langton's Ant
 * Brian's Brain
+* Rule 90
 
 # Keybindings
 `q`: Quit

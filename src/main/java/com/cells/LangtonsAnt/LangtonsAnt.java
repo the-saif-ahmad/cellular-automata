@@ -56,9 +56,9 @@ public class LangtonsAnt extends CellularAutomata {
 		if (facing == 0) // UP
 			yLoc = Helper.decrement(yLoc, cells[0].length - 1, isCircular);
 		else if (facing == 1) // RIGHT
-			xLoc = Helper.increment(xLoc, cells.length - 1, isCircular);
+			xLoc = Helper.increment(xLoc, cells.length, isCircular);
 		else if (facing == 2) // Down
-			yLoc = Helper.increment(yLoc, cells[0].length - 1, isCircular);
+			yLoc = Helper.increment(yLoc, cells[0].length, isCircular);
 		else if (facing == 3) // LEFT
 			xLoc = Helper.decrement(xLoc, cells.length - 1, isCircular);
 	}

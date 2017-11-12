@@ -22,9 +22,9 @@ public abstract class CellularAutomata {
 		Cell[] neighbors = new Cell[8];
 
 		int left = Helper.decrement(x, cells.length - 1, isCircular);
-		int right = Helper.increment(x, cells.length - 1, isCircular);
+		int right = Helper.increment(x, cells.length, isCircular);
 		int up = Helper.decrement(y, cells[0].length - 1, isCircular);
-		int down = Helper.increment(y, cells[0].length - 1, isCircular);
+		int down = Helper.increment(y, cells[0].length, isCircular);
 
 		// Top row
 		neighbors[0] = cells[left][up];

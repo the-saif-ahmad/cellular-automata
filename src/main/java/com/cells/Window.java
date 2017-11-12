@@ -94,12 +94,13 @@ public class Window extends JComponent implements Runnable, KeyListener {
 				break;
 			case (KeyEvent.VK_R):
 				cellAuto = App.cellAutos[App.SELECTED].clone();
+				break;
 			case (KeyEvent.VK_B):
 				App.SELECTED = Helper.decrement(App.SELECTED, App.cellAutos.length - 1, true);
 				cellAuto = App.cellAutos[App.SELECTED].clone();
 				break;
 			case (KeyEvent.VK_N):
-				App.SELECTED = Helper.increment(App.SELECTED, App.cellAutos.length - 1, true);
+				App.SELECTED = Helper.increment(App.SELECTED, App.cellAutos.length, true);
 				cellAuto = App.cellAutos[App.SELECTED].clone();
 				break;
 			default:
@@ -107,6 +108,7 @@ public class Window extends JComponent implements Runnable, KeyListener {
 		}
 	}
 
+	@Override
 	public void keyTyped(KeyEvent e) {
 
 	}

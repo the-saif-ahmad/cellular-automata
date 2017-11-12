@@ -9,5 +9,5 @@ $ mvn package
 
 Run the jar
 ```Bash
-java -cp target/cellular-automata-1.0-SNAPSHOT.jar com.cells.App
+$ java -cp target/cellular-automata-1.0-SNAPSHOT.jar com.cells.App
 ```

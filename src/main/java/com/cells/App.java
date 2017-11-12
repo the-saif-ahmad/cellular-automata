@@ -5,9 +5,9 @@ import com.cells.LangtonsAnt.*;
 import com.cells.BriansBrain.*;
 
 public class App {
-	public static final int cellsX = 125;
-	public static final int cellsY = 125;
-	public static final int cellSize = 6;
+	public static final int cellsX = 300;
+	public static final int cellsY = 250;
+	public static final int cellSize = 3;
 	public static int SELECTED = 0;
 
 	public static final CellularAutomata[] cellAutos = new CellularAutomata[] {

@@ -6,6 +6,7 @@ My implementations of various cellular automata
 * Langton's Ant
 * Brian's Brain
 * Rule 90
+* Cyclical (Rock Paper Scissors)
 
 # Keybindings
 `q`: Quit

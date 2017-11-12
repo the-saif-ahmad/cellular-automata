@@ -1,6 +1,10 @@
 package com.cells;
 
+import java.util.Random;
+
 public class Helper {
+	public static Random random = new Random();
+
 	public static int increment(int value, int cap, boolean isCircular) {
 		if (isCircular)
 			return (value + 1) % cap;

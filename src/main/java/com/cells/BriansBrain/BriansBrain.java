@@ -1,7 +1,6 @@
 package com.cells.BriansBrain;
 
 import com.cells.*;
-import java.util.Random;
 import java.awt.Color;
 
 public class BriansBrain extends CellularAutomaton {
@@ -18,11 +17,9 @@ public class BriansBrain extends CellularAutomaton {
 		name = "Brian's Brain";
 		cells = new BriansBrainCell[width][height];
 
-		Random rand = new Random();
-
 		for (int x = 0; x < cells.length; x++)
 			for (int y = 0; y < cells[0].length; y++)
-				cells[x][y] = new BriansBrainCell(x * size, y * size, size, rand.nextBoolean());
+				cells[x][y] = new BriansBrainCell(x * size, y * size, size, Helper.random.nextBoolean());
 	}
 
 	@Override

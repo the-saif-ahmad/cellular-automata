@@ -1,7 +1,6 @@
 package com.cells.ConwaysGame;
 
 import com.cells.*;
-import java.util.Random;
 import java.awt.Color;
 
 public class ConwaysGame extends CellularAutomaton {
@@ -18,11 +17,9 @@ public class ConwaysGame extends CellularAutomaton {
 		name = "Conway's Game of Life";
 		cells = new ConwayCell[width][height];
 
-		Random rand = new Random();
-
 		for (int x = 0; x < cells.length; x++)
 			for (int y = 0; y < cells[0].length; y++)
-				cells[x][y] = new ConwayCell(x * size, y * size, size, rand.nextBoolean());
+				cells[x][y] = new ConwayCell(x * size, y * size, size, Helper.random.nextBoolean());
 	}
 
 	@Override

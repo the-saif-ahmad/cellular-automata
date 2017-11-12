@@ -2,6 +2,7 @@ com/cells/ConwaysGame/ConwayCell.class
 com/cells/BriansBrain/BriansBrainCell.class
 com/cells/LangtonsAnt/LangtonRule.class
 com/cells/Cell.class
+com/cells/Cyclical/CyclicalCell.class
 com/cells/Rule90/R90Cell.class
 com/cells/BriansBrain/BriansBrain.class
 com/cells/Window.class
@@ -10,5 +11,6 @@ com/cells/App.class
 com/cells/CellularAutomaton.class
 com/cells/Helper.class
 com/cells/LangtonsAnt/LangtonsAnt.class
+com/cells/Cyclical/Cyclical.class
 com/cells/Rule90/Rule90.class
 com/cells/ConwaysGame/ConwaysGame.class

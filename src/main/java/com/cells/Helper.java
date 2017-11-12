@@ -5,7 +5,7 @@ public class Helper {
 		if (isCircular)
 			return (value + 1) % cap;
 		else
-			return value == cap ? cap : value + 1;
+			return value + 1 == cap ? value : value + 1;
 	}
 
 	public static int decrement(int value, int wrap, boolean isCircular) {

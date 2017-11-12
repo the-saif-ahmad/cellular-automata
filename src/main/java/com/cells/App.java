@@ -3,6 +3,7 @@ package com.cells;
 import com.cells.ConwaysGame.*;
 import com.cells.LangtonsAnt.*;
 import com.cells.BriansBrain.*;
+import com.cells.Rule90.*;
 
 public class App {
 	public static final int cellsX = 300;
@@ -13,7 +14,8 @@ public class App {
 	public static final CellularAutomaton[] cellAutos = new CellularAutomaton[] {
 		new ConwaysGame(cellsX, cellsY, cellSize, true),
 		new LangtonsAnt(cellsX, cellsY, cellSize, true),
-		new BriansBrain(cellsX, cellsY, cellSize, true)
+		new BriansBrain(cellsX, cellsY, cellSize, true),
+		new Rule90(cellsX, cellsY, cellSize, false)
 	};
 
 	public static void main(String[] args) {

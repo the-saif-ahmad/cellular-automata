@@ -36,6 +36,11 @@ public class Window extends JComponent implements Runnable, KeyListener {
 		frame.getContentPane().repaint();
 	}
 
+	public void newCellAuto() {
+		cellAuto = App.cellAutos[App.SELECTED].clone();
+		frame.setTitle(cellAuto.getName());
+	}
+
 	@Override
 	public void run() {
 		while (true) {
@@ -72,12 +77,6 @@ public class Window extends JComponent implements Runnable, KeyListener {
 			case (KeyEvent.VK_Q):
 				System.exit(0);
 				break;
-			case (KeyEvent.VK_UP):
-				delay = delay == 1 ? 1 : delay - 1;
-				break;
-			case (KeyEvent.VK_DOWN):
-				delay++;
-				break;
 			default:
 				break;
 		}
@@ -93,15 +92,21 @@ public class Window extends JComponent implements Runnable, KeyListener {
 				stepsPerCycle *= 2;
 				break;
 			case (KeyEvent.VK_R):
-				cellAuto = App.cellAutos[App.SELECTED].clone();
+				newCellAuto();
 				break;
 			case (KeyEvent.VK_B):
 				App.SELECTED = Helper.decrement(App.SELECTED, App.cellAutos.length - 1, true);
-				cellAuto = App.cellAutos[App.SELECTED].clone();
+				newCellAuto();
 				break;
 			case (KeyEvent.VK_N):
 				App.SELECTED = Helper.increment(App.SELECTED, App.cellAutos.length, true);
-				cellAuto = App.cellAutos[App.SELECTED].clone();
+				newCellAuto();
+				break;
+			case (KeyEvent.VK_UP):
+				delay = delay == 1 ? 1 : delay / 2;
+				break;
+			case (KeyEvent.VK_DOWN):
+				delay *= 2;
 				break;
 			default:
 				break;

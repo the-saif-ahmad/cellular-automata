@@ -13,9 +13,9 @@ My implementations of various cellular automata
 
 `r`: Reset the current automaton
 
-'b': Go to previous automaton
+`b`: Go to previous automaton
 
-'n': Go to next automaton
+`n`: Go to next automaton
 
 Left arrow: Doube steps between display updates
 

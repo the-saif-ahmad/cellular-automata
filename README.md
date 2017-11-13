@@ -45,3 +45,7 @@ To generate files for Eclipse:
 ```Bash
 $ mvn eclipse:eclipse
 ```
+
+# To-do
+* Make a rule class for automata like life
+* Add Day and Night

@@ -18,7 +18,7 @@ My implementations of various cellular automata
 
 `n`: Go to next automaton
 
-Left arrow: Doube steps between display updates
+Left arrow: Double steps between display updates
 
 Right arrow: Halve steps between display updates
 

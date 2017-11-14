@@ -7,6 +7,7 @@ My implementations of various cellular automata
 * Brian's Brain
 * Rule 90
 * Cyclical (Rock Paper Scissors)
+* Day and Night
 
 # Keybindings
 `q`: Quit
@@ -47,5 +48,4 @@ $ mvn eclipse:eclipse
 ```
 
 # To-do
-* Make a rule class for automata like life
-* Add Day and Night
+* Make resets random

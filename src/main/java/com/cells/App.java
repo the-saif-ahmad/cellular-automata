@@ -5,6 +5,7 @@ import com.cells.LangtonsAnt.*;
 import com.cells.BriansBrain.*;
 import com.cells.Rule90.*;
 import com.cells.Cyclical.*;
+import com.cells.DayAndNight.*;
 
 public class App {
 	public static final int WIDTH = 900;
@@ -19,7 +20,8 @@ public class App {
 		new LangtonsAnt(cellsX, cellsY, cellSize, true),
 		new BriansBrain(cellsX, cellsY, cellSize, true),
 		new Rule90(cellsX, cellsY, cellSize, false),
-		new Cyclical(cellsX, cellsY, cellSize, true)
+		new Cyclical(cellsX, cellsY, cellSize, true),
+		new DayAndNight(cellsX, cellsY, cellSize, true)
 	};
 
 	public static void main(String[] args) {

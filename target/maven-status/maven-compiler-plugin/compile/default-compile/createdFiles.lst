@@ -1,6 +1,8 @@
 com/cells/ConwaysGame/ConwayCell.class
 com/cells/BriansBrain/BriansBrainCell.class
+com/cells/DayAndNight/DayAndNight.class
 com/cells/LangtonsAnt/LangtonRule.class
+com/cells/DayAndNight/DANCell.class
 com/cells/Cell.class
 com/cells/Cyclical/CyclicalCell.class
 com/cells/Rule90/R90Cell.class

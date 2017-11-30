@@ -7,19 +7,22 @@ public class DayAndNight extends CellularAutomaton {
 	public DayAndNight(int size, DANCell[][] cells, boolean isCircular) {
 		this.isCircular = isCircular;
 
-		name = "Day and Night";
 		this.cells = cells;
 	}
 
 	public DayAndNight(int width, int height, int size, boolean isCircular) {
 		this.isCircular = isCircular;
 
-		name = "Day and Night";
 		cells = new DANCell[width][height];
 
 		for (int x = 0; x < cells.length; x++)
 			for (int y = 0; y < cells[0].length; y++)
 				cells[x][y] = new DANCell(x * size, y * size, size, Helper.random.nextBoolean());
+	}
+
+	@Override
+	public String getName() {
+		return "Day and Night";
 	}
 
 	@Override

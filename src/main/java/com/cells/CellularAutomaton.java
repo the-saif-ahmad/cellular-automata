@@ -1,17 +1,12 @@
 package com.cells;
 
 public abstract class CellularAutomaton {
-	protected String name;
 	protected int size;
 	protected Cell[][] cells;
 	protected boolean isCircular;
 
 	public Cell[][] getCells() {
 		return cells;
-	}
-
-	public String getName() {
-		return name;
 	}
 
 	public boolean isCircular() {
@@ -47,6 +42,7 @@ public abstract class CellularAutomaton {
 		return neighbors;
 	}
 
+	public abstract String getName();
 	public abstract void update();
 	public abstract CellularAutomaton clone();
 }

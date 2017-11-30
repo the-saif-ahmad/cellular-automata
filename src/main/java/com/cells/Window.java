@@ -72,19 +72,11 @@ public class Window extends JComponent implements Runnable, KeyListener {
 	}
 
 	@Override
-	public void keyPressed(KeyEvent e) {
+	public void keyReleased(KeyEvent e) {
 		switch (e.getKeyCode()) {
 			case (KeyEvent.VK_Q):
 				System.exit(0);
 				break;
-			default:
-				break;
-		}
-	}
-
-	@Override
-	public void keyReleased(KeyEvent e) {
-		switch (e.getKeyCode()) {
 			case (KeyEvent.VK_LEFT):
 				stepsPerCycle = stepsPerCycle == 1 ? 1 : stepsPerCycle / 2;
 				break;
@@ -115,6 +107,11 @@ public class Window extends JComponent implements Runnable, KeyListener {
 
 	@Override
 	public void keyTyped(KeyEvent e) {
+
+	}
+
+	@Override
+	public void keyPressed(KeyEvent e) {
 
 	}
 }

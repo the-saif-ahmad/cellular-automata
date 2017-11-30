@@ -13,7 +13,6 @@ public class LangtonsAnt extends CellularAutomaton {
 		this.yLoc = yLoc;
 		this.facing = facing;
 
-		name = "Langton's Ant";
 		this.cells = cells;
 	}
 
@@ -21,7 +20,6 @@ public class LangtonsAnt extends CellularAutomaton {
 		this.isCircular = isCircular;
 		this.size = size;
 
-		name = "Langton's Ant";
 		cells = new LangtonCell[width][height];
 
 		for (int x = 0; x < cells.length; x++)
@@ -31,6 +29,11 @@ public class LangtonsAnt extends CellularAutomaton {
 		xLoc = width / 2;
 		yLoc = height / 2;
 		facing = 0;
+	}
+
+	@Override
+	public String getName() {
+		return "Langton's Ant";
 	}
 
 	@Override

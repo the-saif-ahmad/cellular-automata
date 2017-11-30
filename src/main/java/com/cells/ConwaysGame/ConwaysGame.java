@@ -7,19 +7,22 @@ public class ConwaysGame extends CellularAutomaton {
 	public ConwaysGame(int size, ConwayCell[][] cells, boolean isCircular) {
 		this.isCircular = isCircular;
 
-		name = "Conway's Game of Life";
 		this.cells = cells;
 	}
 
 	public ConwaysGame(int width, int height, int size, boolean isCircular) {
 		this.isCircular = isCircular;
 
-		name = "Conway's Game of Life";
 		cells = new ConwayCell[width][height];
 
 		for (int x = 0; x < cells.length; x++)
 			for (int y = 0; y < cells[0].length; y++)
 				cells[x][y] = new ConwayCell(x * size, y * size, size, Helper.random.nextBoolean());
+	}
+
+	@Override
+	public String getName() {
+		return "Conway's Game of Life";
 	}
 
 	@Override

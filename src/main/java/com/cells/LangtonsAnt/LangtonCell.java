@@ -6,7 +6,9 @@ import java.awt.Color;
 public class LangtonCell extends Cell {
 	private static final LangtonRule[] rules = new LangtonRule[] {
 		new LangtonRule(Color.BLACK, 3), // turn left
-		new LangtonRule(Color.WHITE, 1) // turn right
+		new LangtonRule(Color.WHITE, 1), // turn right
+		new LangtonRule(Color.GREEN, 1),
+		new LangtonRule(Color.MAGENTA, 3)
 	};
 
 	private int rule;

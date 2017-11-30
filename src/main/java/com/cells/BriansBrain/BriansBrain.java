@@ -7,19 +7,22 @@ public class BriansBrain extends CellularAutomaton {
 	public BriansBrain(int size, BriansBrainCell[][] cells, boolean isCircular) {
 		this.isCircular = isCircular;
 
-		name = "Brian's Brain";
 		this.cells = cells;
 	}
 
 	public BriansBrain(int width, int height, int size, boolean isCircular) {
 		this.isCircular = isCircular;
 
-		name = "Brian's Brain";
 		cells = new BriansBrainCell[width][height];
 
 		for (int x = 0; x < cells.length; x++)
 			for (int y = 0; y < cells[0].length; y++)
 				cells[x][y] = new BriansBrainCell(x * size, y * size, size, Helper.random.nextBoolean());
+	}
+
+	@Override
+	public String getName() {
+		return "Brian's Brain";
 	}
 
 	@Override

@@ -8,20 +8,22 @@ public class Rule90 extends CellularAutomaton {
 	public Rule90(int size, R90Cell[][] cells, boolean isCircular) {
 		this.isCircular = isCircular;
 
-		name = "Rule 90";
 		this.cells = cells;
 	}
 
 	public Rule90(int width, int height, int size, boolean isCircular) {
 		this.isCircular = isCircular;
 
-		name = "Rule 90";
-
 		cells = new R90Cell[width][height];
 
 		for (int x = 0; x < cells.length; x++)
 			for (int y = 0; y < cells[0].length; y++)
 				cells[x][y] = new R90Cell(x * size, y * size, size, x == width / 2 && y == 0);
+	}
+
+	@Override
+	public String getName() {
+		return "Rule 90";
 	}
 
 	@Override

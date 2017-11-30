@@ -1,5 +1,6 @@
 /home/saif/repos/cellular-automata/src/main/java/com/cells/Window.java
 /home/saif/repos/cellular-automata/src/main/java/com/cells/LangtonsAnt/LangtonRule.java
+/home/saif/repos/cellular-automata/src/main/java/com/cells/DayAndNight/DayAndNight.java
 /home/saif/repos/cellular-automata/src/main/java/com/cells/LangtonsAnt/LangtonCell.java
 /home/saif/repos/cellular-automata/src/main/java/com/cells/App.java
 /home/saif/repos/cellular-automata/src/main/java/com/cells/ConwaysGame/ConwaysGame.java
@@ -12,5 +13,6 @@
 /home/saif/repos/cellular-automata/src/main/java/com/cells/LangtonsAnt/LangtonsAnt.java
 /home/saif/repos/cellular-automata/src/main/java/com/cells/Cell.java
 /home/saif/repos/cellular-automata/src/main/java/com/cells/BriansBrain/BriansBrainCell.java
+/home/saif/repos/cellular-automata/src/main/java/com/cells/DayAndNight/DANCell.java
 /home/saif/repos/cellular-automata/src/main/java/com/cells/Helper.java
 /home/saif/repos/cellular-automata/src/main/java/com/cells/Rule90/Rule90.java

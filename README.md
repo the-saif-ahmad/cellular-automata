@@ -46,6 +46,3 @@ To generate files for Eclipse:
 ```Bash
 $ mvn eclipse:eclipse
 ```
-
-# To-do
-* Make resets random

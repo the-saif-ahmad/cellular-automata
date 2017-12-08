@@ -3,10 +3,8 @@ package com.cells.Cyclical;
 import com.cells.*;
 
 public class Cyclical extends CellularAutomaton {
-	public Cyclical(int size, CyclicalCell[][] cells, boolean isCircular) {
-		this.isCircular = isCircular;
-
-		this.cells = cells;
+	public Cyclical(CyclicalBuilder builder) {
+		this(builder.width(), builder.height(), builder.size(), builder.isCircular());
 	}
 
 	public Cyclical(int width, int height, int size, boolean isCircular) {
@@ -38,16 +36,5 @@ public class Cyclical extends CellularAutomaton {
 		}
 
 		cells = newCells;
-	}
-
-	@Override
-	public CellularAutomaton clone() {
-		CyclicalCell[][] newCells = new CyclicalCell[cells.length][cells[0].length];
-
-		for (int x = 0; x < cells.length; x++)
-			for (int y = 0; y < cells[0].length; y++)
-				newCells[x][y] = ((CyclicalCell) cells[x][y]).clone();
-
-		return new Cyclical(size, newCells, isCircular);
 	}
 }

@@ -4,10 +4,8 @@ import com.cells.*;
 import java.awt.Color;
 
 public class DayAndNight extends CellularAutomaton {
-	public DayAndNight(int size, DANCell[][] cells, boolean isCircular) {
-		this.isCircular = isCircular;
-
-		this.cells = cells;
+	public DayAndNight(DayAndNightBuilder builder) {
+		this(builder.width(), builder.height(), builder.size(), builder.isCircular());
 	}
 
 	public DayAndNight(int width, int height, int size, boolean isCircular) {
@@ -40,17 +38,6 @@ public class DayAndNight extends CellularAutomaton {
 		}
 
 		cells = newCells;
-	}
-
-	@Override
-	public CellularAutomaton clone() {
-		DANCell[][] newCells = new DANCell[cells.length][cells[0].length];
-
-		for (int x = 0; x < cells.length; x++)
-			for (int y = 0; y < cells[0].length; y++)
-				newCells[x][y] = ((DANCell) cells[x][y]).clone();
-
-		return new DayAndNight(size, newCells, isCircular);
 	}
 
 	private int getLivingCells(Cell[] cells) {

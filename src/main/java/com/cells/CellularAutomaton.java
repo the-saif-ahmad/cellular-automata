@@ -44,5 +44,4 @@ public abstract class CellularAutomaton {
 
 	public abstract String getName();
 	public abstract void update();
-	public abstract CellularAutomaton clone();
 }

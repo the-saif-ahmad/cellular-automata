@@ -4,10 +4,8 @@ import com.cells.*;
 import java.awt.Color;
 
 public class ConwaysGame extends CellularAutomaton {
-	public ConwaysGame(int size, ConwayCell[][] cells, boolean isCircular) {
-		this.isCircular = isCircular;
-
-		this.cells = cells;
+	public ConwaysGame(ConwaysGameBuilder builder) {
+		this(builder.width(), builder.height(), builder.size(), builder.isCircular());
 	}
 
 	public ConwaysGame(int width, int height, int size, boolean isCircular) {
@@ -40,17 +38,6 @@ public class ConwaysGame extends CellularAutomaton {
 		}
 
 		cells = newCells;
-	}
-
-	@Override
-	public CellularAutomaton clone() {
-		ConwayCell[][] newCells = new ConwayCell[cells.length][cells[0].length];
-
-		for (int x = 0; x < cells.length; x++)
-			for (int y = 0; y < cells[0].length; y++)
-				newCells[x][y] = ((ConwayCell) cells[x][y]).clone();
-
-		return new ConwaysGame(size, newCells, isCircular);
 	}
 
 	private int getLivingCells(Cell[] cells) {

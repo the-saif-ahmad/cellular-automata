@@ -37,7 +37,7 @@ public class Window extends JComponent implements Runnable, KeyListener {
 	}
 
 	public void newCellAuto() {
-		cellAuto = App.cellAutos[App.SELECTED].clone();
+		cellAuto = App.cellAutos[App.SELECTED].build();
 		frame.setTitle(cellAuto.getName());
 	}
 

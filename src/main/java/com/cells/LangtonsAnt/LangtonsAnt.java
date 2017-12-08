@@ -6,14 +6,8 @@ public class LangtonsAnt extends CellularAutomaton {
 	private int xLoc, yLoc;
 	private int facing;
 
-	public LangtonsAnt(int size, LangtonCell[][] cells, boolean isCircular, int xLoc, int yLoc, int facing) {
-		this.isCircular = isCircular;
-		this.size = size;
-		this.xLoc = xLoc;
-		this.yLoc = yLoc;
-		this.facing = facing;
-
-		this.cells = cells;
+	public LangtonsAnt(LangtonsAntBuilder builder) {
+		this(builder.width(), builder.height(), builder.size(), builder.isCircular());
 	}
 
 	public LangtonsAnt(int width, int height, int size, boolean isCircular) {
@@ -42,17 +36,6 @@ public class LangtonsAnt extends CellularAutomaton {
 		facing = (facing + cell.getDirection()) % 4;
 		cell.update();
 		move();
-	}
-
-	@Override
-	public CellularAutomaton clone() {
-		LangtonCell[][] newCells = new LangtonCell[cells.length][cells[0].length];
-
-		for (int x = 0; x < cells.length; x++)
-			for (int y = 0; y < cells[0].length; y++)
-				newCells[x][y] = ((LangtonCell) cells[x][y]).clone();
-
-		return new LangtonsAnt(size, newCells, isCircular, xLoc, yLoc, facing);
 	}
 
 	private void move() {

@@ -15,17 +15,16 @@ public class App {
 	public static final int cellsY = HEIGHT / cellSize;
 	public static int SELECTED = 0;
 
-	public static final CellularAutomaton[] cellAutos = new CellularAutomaton[] {
-		new ConwaysGame(cellsX, cellsY, cellSize, true),
-		new LangtonsAnt(cellsX, cellsY, cellSize, true),
-		new BriansBrain(cellsX, cellsY, cellSize, true),
-		new Rule90(cellsX, cellsY, cellSize, false),
-		new Cyclical(cellsX, cellsY, cellSize, true),
-		new DayAndNight(cellsX, cellsY, cellSize, true)
+	public static final Builder[] cellAutos = new Builder[] {
+		new ConwaysGameBuilder(cellsX, cellsY, cellSize, true),
+		new LangtonsAntBuilder(cellsX, cellsY, cellSize, true),
+		new BriansBrainBuilder(cellsX, cellsY, cellSize, true),
+		new Rule90Builder(cellsX, cellsY, cellSize, false),
+		new CyclicalBuilder(cellsX, cellsY, cellSize, true),
+		new DayAndNightBuilder(cellsX, cellsY, cellSize, true)
 	};
 
 	public static void main(String[] args) {
-
-		Window window = new Window(cellsX * cellSize, cellsY * cellSize, cellAutos[SELECTED].clone());
+		Window window = new Window(cellsX * cellSize, cellsY * cellSize, cellAutos[SELECTED].build());
 	}
 }

@@ -5,10 +5,8 @@ import com.cells.*;
 public class Rule90 extends CellularAutomaton {
 	int currRow = 1;
 
-	public Rule90(int size, R90Cell[][] cells, boolean isCircular) {
-		this.isCircular = isCircular;
-
-		this.cells = cells;
+	public Rule90(Rule90Builder builder) {
+		this(builder.width(), builder.height(), builder.size(), builder.isCircular());
 	}
 
 	public Rule90(int width, int height, int size, boolean isCircular) {
@@ -50,16 +48,5 @@ public class Rule90 extends CellularAutomaton {
 			sum++;
 
 		return sum;
-	}
-
-	@Override
-	public CellularAutomaton clone() {
-		R90Cell[][] newCells = new R90Cell[cells.length][cells[0].length];
-
-		for (int x = 0; x < cells.length; x++)
-			for (int y = 0; y < cells[0].length; y++)
-				newCells[x][y] = ((R90Cell) cells[x][y]).clone();
-
-		return new Rule90(size, newCells, isCircular);
 	}
 }
